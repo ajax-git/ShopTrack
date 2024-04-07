@@ -1,0 +1,59 @@
+{
+  "name": "my-shoptrack-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@heroicons/react": "^2.1.3",
+    "@material-tailwind/react": "^2.1.9",
+    "@mui/icons-material": "^5.15.14",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.91",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "cheerio": "^1.0.0-rc.12",
+    "date-fns": "^3.6.0",
+    "heroicons-react": "^1.4.1",
+    "or": "^0.2.0",
+    "react": "^18.2.0",
+    "react-datepicker": "^6.5.0",
+    "react-day-picker": "^8.10.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^10.0.5",
+    "react-transition-group": "^4.4.5",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"npm:start --prefix ../my-shoptrack-api\" \"npm start\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-datepicker": "^6.2.0",
+    "@types/react-modal": "^3.16.3",
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1"
+  }
+}

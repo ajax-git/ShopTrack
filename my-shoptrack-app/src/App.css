@@ -1,0 +1,115 @@
+.add-list-form-container,
+.shopping-lists-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.navbar {
+  padding: 20px;
+  background-color: #F7F7F7;
+  background: linear-gradient(rgb(250, 250, 250) 0%, rgb(225, 234, 238)) fixed;
+}
+
+.page-background {
+  background: linear-gradient(rgb(250, 250, 250) 0%, rgb(225, 234, 238)) fixed;
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #FFFFFF;
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333333;
+}
+
+.input, .datepicker {
+  @apply px-4 py-2 border border-gray-300 rounded-md;
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+.btn {
+  @apply px-4 py-2 bg-blue-500 text-white font-bold rounded-md;
+  background-color: #007BFF;
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dark-mode-toggle {
+  animation: slideInFromBottom 0.5s ease-in-out;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.transition-wrapper {
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background: linear-gradient(rgb(250, 250, 250) 0%, rgb(225, 234, 238)) fixed;
+  color: #ffffff;
+}
