@@ -113,3 +113,56 @@
   background: linear-gradient(rgb(250, 250, 250) 0%, rgb(225, 234, 238)) fixed;
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .add-list-form-container,
+  .shopping-lists-container {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar .button-container button {
+    margin: 0 5px;
+  }
+
+  .page-background {
+    flex-direction: column; 
+    align-items: stretch; 
+  }
+
+  .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    max-width: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .input, .datepicker {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 10px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+}

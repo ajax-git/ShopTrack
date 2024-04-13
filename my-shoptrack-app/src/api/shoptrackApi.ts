@@ -1,7 +1,7 @@
 import { ShoppingList, ShoppingItem } from '../types';
 import { toast } from 'react-toastify';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://ajax22.pl:5000';
 const getToken = (): string | null => localStorage.getItem('token');
 
 // Funkcja pobierająca listy zakupów z serwera

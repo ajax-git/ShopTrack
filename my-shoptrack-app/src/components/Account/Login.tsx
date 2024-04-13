@@ -17,7 +17,7 @@ export function Login() {
     try {
       const { token } = await loginUser(login, password);
       localStorage.setItem('token', token);
-      logIn();
+      logIn(token);
       goToHome();
     } catch (error) {
       if (error instanceof Error) {
