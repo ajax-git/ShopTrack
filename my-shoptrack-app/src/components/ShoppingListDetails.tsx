@@ -124,10 +124,14 @@ const ShoppingListDetails: React.FC = () => {
     toast.success(`Oznaczyłeś produkt jako zakupiony.`);
   };
 
-  const handleProductChange = (e: any) => {
-    const selectedProductName = e;
-    setNewItemName(selectedProductName);
-  }
+  const [forceUpdateKey, setForceUpdateKey] = useState(0);
+
+  const handleProductChange = (value: string | undefined) => {
+    if (value) {
+      setNewItemName(value);
+      setForceUpdateKey(prevKey => prevKey + 1);
+    }
+  };
 
   return (
   <div className="p-4">
@@ -135,7 +139,7 @@ const ShoppingListDetails: React.FC = () => {
       Dodaj nowy produkt do listy
     </h4>
   <div className="mt-4 flex gap-x-2">
-    <Select label="Ostatnie produkty" onChange={(val) => handleProductChange(val)} value={newItemName} placeholder="Ostatnie produkty" className="border rounded px-2 py-1" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+    <Select key={forceUpdateKey} label="Ostatnie produkty" onChange={handleProductChange} value={newItemName} placeholder="Ostatnie produkty" className="border rounded px-2 py-1" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
       {products.map((product) => (
         <TailwindOption key={product.id} value={product.name}>{product.name}</TailwindOption>
       ))}
