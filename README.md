@@ -7,6 +7,13 @@
 
 </br>
 
+## Live Demo
+[CLICK](https://ajax22.pl)
+
+<h2>Screenshots</h2>
+
+<p align="center"><img src="https://i.imgur.com/ey5iBM8.png" /><img src="https://i.imgur.com/QU07I19.png" /><img src="https://i.imgur.com/Nt6mxw0.png" /><img src="https://i.imgur.com/uVYOYM2.png" /></p>
+
 ### Built With
 
 ShopTrack consists of two main parts: a backend API (`my-shoptrack-api`) and a frontend application (`my-shoptrack-app`).
