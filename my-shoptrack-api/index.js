@@ -7,8 +7,8 @@ require("dotenv").config();
 
 const app = express();
 
-//app.use(cors());
-const allowedOrigins = ["https://ajax22.pl", "https://www.ajax22.pl"];
+app.use(cors());
+/*const allowedOrigins = ["https://ajax22.pl", "https://www.ajax22.pl"];
 
 app.use(
   cors({
@@ -24,7 +24,7 @@ app.use(
   })
 );
 
-app.use(express.json());
+app.use(express.json());*/
 
 const db = mysql.createPool({
   host: process.env.DB_HOST || "localhost",

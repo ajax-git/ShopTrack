@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRouteLogin from './components/ProtectedRouteLogin';
 import AddListForm from './components/AddListForm';
 import ShoppingLists from './components/ShoppingLists';
 import ShoppingListDetails from './components/ShoppingListDetails';
@@ -51,8 +52,16 @@ const App: React.FC = () => {
               } />
               <Route path="/list/:id" element={<ProtectedRoute><ShoppingListDetails /></ProtectedRoute>} />
 
-              <Route path="/account/register" element={<Register />} />
-              <Route path="/account/login" element={<Login />} />
+              <Route path="/account/register" element={
+                <ProtectedRouteLogin>
+                  <Register />
+                </ProtectedRouteLogin>
+              } />
+              <Route path="/account/login" element={
+                <ProtectedRouteLogin>
+                  <Login />
+                </ProtectedRouteLogin>
+              } />
 
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
