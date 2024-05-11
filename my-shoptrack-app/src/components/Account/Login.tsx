@@ -21,9 +21,9 @@ export function Login() {
       goToHome();
     } catch (error) {
       if (error instanceof Error) {
-        toast.error((error as Error).message);
+        //toast.error((error as Error).message);
       } else {
-        toast.error((error as Error).message);
+        //toast.error((error as Error).message);
       }
     } finally {
       setIsLoading(false);

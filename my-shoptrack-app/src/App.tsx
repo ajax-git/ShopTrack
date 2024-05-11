@@ -15,6 +15,8 @@ import { Register } from './components/Account/Register';
 import { Login } from './components/Account/Login';
 import { AuthProvider } from './context/AuthContext';
 import NotFoundPage from './components/NotFoundPage';
+import { Progress, Typography } from "@material-tailwind/react";
+import Alert from './components/Alert'
 
 const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -35,6 +37,7 @@ const App: React.FC = () => {
       <div className="page-background">
         <div className="container mx-auto p-4">
           <TransitionWrapper>
+            <Alert />
             <Routes>
               <Route path="/" element={
                 <div className="flex flex-col lg:flex-row gap-4">
@@ -68,7 +71,7 @@ const App: React.FC = () => {
           </TransitionWrapper>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
       <Footer />
     </Router>
     </AuthProvider>

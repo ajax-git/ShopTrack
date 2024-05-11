@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import { registerUser } from '../../api/shoptrackApi';
 import { useGlobalNavigate } from '../../hooks/useGlobalNavigate';
-
-interface FormData {
-  name: string;
-  email: string;
-  password: string;
-}
+import { FormData } from '../../types';
 
 export function Register() {
   const { goToHome } = useGlobalNavigate();
@@ -75,11 +70,37 @@ export function Register() {
             className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent !border-t-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
           />
         </div>
+        
+      <div className="inline-flex items-center">
+      <label className="relative -ml-2.5 flex cursor-pointer items-center rounded-full p-3" htmlFor="remember">
+        <input type="checkbox"
+          className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:bg-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
+          id="remember"
+          required />
+        <span
+          className="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+            stroke="currentColor" stroke-width="1">
+            <path fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </label>
+      <label className="mt-px font-light text-gray-700 cursor-pointer select-none" htmlFor="remember">
+        <p className="flex items-center font-sans text-sm antialiased font-normal leading-normal text-gray-700">
+          Zgadzam się z
+          <a href="#" className="font-medium transition-colors hover:text-gray-900">
+            &nbsp;Warunkami użytkowania
+          </a>
+        </p>
+      </label>
+    </div>
         <button
           type="submit"
           className="mt-6 block w-full select-none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         >
-          Sign Up
+          Zarejestruj się
         </button>
         <p className="block mt-4 font-sans text-base antialiased font-normal leading-relaxed text-center text-gray-700">
           Posiadasz już konto?{' '}

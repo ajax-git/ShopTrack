@@ -24,15 +24,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchChange }) => {
           </a>
           {isLoggedIn ? (
             <div className="relative flex items-center gap-x-1">
-              <button
-                className="select-none rounded-lg bg-gradient-to-tr from-red-600 to-red-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-                type="button"
-                onClick={handleLogout}
-              >
+              <Button variant="text" size="sm" className="inline-block bg-white" onClick={() => handleLogout()}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 <span>Wyloguj</span>
-              </button>
+              </Button>
               
-              <div className="relative h-10 w-full min-w-[288px]">
+              
+              {/*<div className="relative h-10 w-full min-w-[288px]">
                 <input
                   type="search"
                   className="peer h-full w-full rounded-[7px] border border-white border-t-transparent bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -48,6 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchChange }) => {
                   type="button">
                   Szukaj
                 </button>
+                */}
               </div>
           ) : (
             <div className="relative flex items-center gap-x-1">

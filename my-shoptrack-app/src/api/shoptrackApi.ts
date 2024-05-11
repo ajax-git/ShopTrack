@@ -1,24 +1,9 @@
 import { ShoppingList, ShoppingItem } from '../types';
 import { toast } from 'react-toastify';
+import { APIConfig, RegisterData, LoginResponse  } from '../types';
 
-interface APIConfig {
-  method?: 'GET' | 'POST' | 'DELETE' | 'PATCH';
-  body?: Record<string, any>;
-  headers?: HeadersInit;
-}
-
-interface RegisterData {
-  name: string;
-  email: string;
-  password: string;
-}
-
-interface LoginResponse {
-  token: string;
-}
-
-const BASE_URL = 'http://localhost:5000';
-//const BASE_URL = 'https://ajax22.pl:5000';
+//const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://ajax22.pl:5000';
 
 const getToken = (): string | null => localStorage.getItem('token');
 

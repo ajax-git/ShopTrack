@@ -28,6 +28,7 @@ const AddListForm: React.FC<AddListFormProps> = ({ onListAdded }) => {
 
     await addList(title, formattedDeadline, notes);
     setTitle('');
+    setNotes('');
     setDeadline(undefined);
     onListAdded();
 
