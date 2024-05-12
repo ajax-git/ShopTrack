@@ -15,7 +15,6 @@ import { Register } from './components/Account/Register';
 import { Login } from './components/Account/Login';
 import { AuthProvider } from './context/AuthContext';
 import NotFoundPage from './components/NotFoundPage';
-import { Progress, Typography } from "@material-tailwind/react";
 import Alert from './components/Alert'
 
 const App: React.FC = () => {
